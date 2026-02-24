@@ -1,4 +1,5 @@
-/*********************************************************************************************
+/*
+ *******************************************************************************************
  * Radify - A radial menu launcher with multi-ring layouts, submenus, and interactive items.
  *
  * @author Martin Chartier (XMCQCX)
@@ -7,7 +8,8 @@
  * @license MIT
  * @see {@link https://github.com/XMCQCX/RadifyClass-RadifySkinEditor GitHub}
  * @see {@link https://www.autohotkey.com/boards/viewtopic.php?f=83&t=138484 AHK Forum}
- ********************************************************************************************/
+ *******************************************************************************************
+*/
 Class Radify {
     static __New()
     {
@@ -1953,4 +1955,5 @@ class JSON_thqby_Radify {
 			return s
 		}
 	}
+
 }
