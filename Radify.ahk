@@ -267,11 +267,13 @@ Class Radify {
                 SplitPath(A_LoopFilePath, &fileName), this.sounds.%fileName% := A_LoopFilePath
     }
 
-    /********************************************************************************************
+    /*
+	 *******************************************************************************************
      * Sets the directory for images, allowing image files to be referenced by filename only.
      *
      * @param {string} dirPath
-    ********************************************************************************************/
+     *******************************************************************************************
+	*/
     static SetImageDir(dirPath?) => this.SetDirectory('image', A_ThisFunc, dirPath?)
 
     /********************************************************************************************
@@ -312,13 +314,15 @@ Class Radify {
         return dirPath
     }
 
-    /*********************************************************************************************
+    /*
+	 ********************************************************************************************
      * Creates a menu with the specified ID, structure, and configuration options.
      *
      * @param {string} menuId - Unique identifier of the menu.
      * @param {array} menuItems - An array containing one or more inner arrays (rings), each containing at least one item object.
      * @param {object} options - Configuration options for the menu.
-    ********************************************************************************************/
+     *******************************************************************************************
+     */
     static CreateMenu(menuId?, menuItems?, options := {})
     {
         if (!IsSet(menuId) || menuId = '')
@@ -375,11 +379,13 @@ Class Radify {
         }
     }
 
-    /*********************************************************************************************
+    /*
+	 ********************************************************************************************
      * Deletes the specified root menu and all its submenus, freeing all associated resources.
      *
      * @param {string} rootMenuId - Unique identifier of the root menu to delete.
-    ********************************************************************************************/
+     *******************************************************************************************
+	 */
     static CleanupMenu(rootMenuId)
     {
         if (!this.menus.HasOwnProp(rootMenuId))
@@ -1034,10 +1040,12 @@ Class Radify {
         oMenu.prevTooltipX := oMenu.prevTooltipY := oMenu.currentTooltip := 0
     }
 
-    /*********************************************************************************************
+    /*
+	 ********************************************************************************************
      * @credits nperovic
      * @see {@link https://github.com/nperovic/ToolTipEx GitHub}
-    ********************************************************************************************/
+     *******************************************************************************************
+     */
     static UpdateTooltipPosition(oMenu, ttHwnd)
     {
         if (!WinExist(ttHwnd))
@@ -1091,7 +1099,8 @@ Class Radify {
      * @credits lexikos, nperovic
      * @see {@link https://www.autohotkey.com/boards/viewtopic.php?t=103459 AHK Forum}
      * @see {@link https://github.com/nperovic/ToolTipEx GitHub}
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static CalculatePopupWindowPosition(hwnd, &newX, &newY)
     {
         static flags := (VerCompare(A_OSVersion, '6.2') < 0 ? 0 : 0x10000)
@@ -1134,7 +1143,8 @@ Class Radify {
      *
      * @param {string} menuId - Unique identifier of the menu.
      * @param {boolean} autoCenterMouse - Center mouse cursor when showing menu.
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static Show(menuId, autoCenterMouse?)
     {
         if (!this.menus.HasOwnProp(menuId))
@@ -1191,7 +1201,8 @@ Class Radify {
      *
      * @param {string} menuId - Unique identifier of the menu.
      * @param {boolean} suppressSound - Suppresses the menu close sound.
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static Close(menuId, suppressSound := false, *)
     {
         if (!this.menus.HasOwnProp(menuId))
@@ -1689,7 +1700,8 @@ Class Radify {
     /********************************************************************************************
      * @credits teadrinker, XMCQCX (modifications)
      * @see {@link https://www.autohotkey.com/boards/viewtopic.php?f=76&t=66133&start=20 AHK Forum}
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static GetFolderPath(folderName)
     {
         static folderGUIDs := {
@@ -1722,7 +1734,8 @@ Class Radify {
     /*********************************************************************************************
      * @credits Faddix, XMCQCX (minor modifications)
      * @see {@link https://www.autohotkey.com/boards/viewtopic.php?f=83&t=130425 AHK Forum}
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static PlayWavConcurrent(fPath)
     {
         static obj := initialize()
@@ -1803,7 +1816,8 @@ Class Radify {
  * @author thqby, HotKeyIt
  * @date 2024/02/24
  * @version 1.0.7
- ************************************************************************************************/
+ ***********************************************************************************************
+ */
 class JSON_thqby_Radify {
 	static null := ComValue(1, 0), true := ComValue(0xB, 1), false := ComValue(0xB, 0)
 
@@ -1957,3 +1971,4 @@ class JSON_thqby_Radify {
 	}
 
 }
+
