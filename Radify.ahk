@@ -280,7 +280,8 @@ Class Radify {
      * Sets the directory for sounds, allowing sound files to be referenced by filename only.
      *
      * @param {string} dirPath
-    ********************************************************************************************/
+    *******************************************************************************************
+	*/
     static SetSoundDir(dirPath?) => this.SetDirectory('sound', A_ThisFunc, dirPath?)
 
     ;=============================================================================================
@@ -1971,4 +1972,5 @@ class JSON_thqby_Radify {
 	}
 
 }
+
 
